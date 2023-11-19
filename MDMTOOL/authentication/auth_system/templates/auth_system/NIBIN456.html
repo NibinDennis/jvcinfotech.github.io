@@ -1,0 +1,857 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="fixed js flexbox flexboxlegacy no-touch csstransforms csstransforms3d no-overflowscrolling">
+<head>
+    <style type="text/css">
+        @charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}
+
+    </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASH1 - JVC Online</title>
+    <link href="{% static 'css/jquery-ui.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesom.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-fileupload.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/theme.css' %}" rel="stylesheet">
+    <link href="{% static 'css/jquery.dataTables.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style1.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'css/BOM1.css' %}" rel="stylesheet">
+
+    <script src="{% static 'Scripts/jquery.js' %}"></script>
+    <script src="{% static 'Scripts/jquery-ui.js' %}"></script>
+    <script src="{% static 'Scripts/angular.js' %}"></script>
+    <script src="{% static 'Scripts/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'Scripts/angular-datatables.min.js' %}"></script>
+    <script src="{% static 'Scripts/angular-route.js' %}"></script>
+    <script src="{% static 'Scripts/angular-filter.min.js' %}"></script>
+
+
+
+</head>
+<body ng-app="JVCApp" class="pace-done ng-scope">
+    
+    
+
+    <section class="body">
+        <!-- start: header -->
+        <header class="header">
+            <div class="logo-container">
+                <a href="#" class="logo">
+                    <img src="{% static 'images/Nibin666.jpg' %}" height="40" alt="JVC">
+                </a>
+                
+                <div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">
+                    <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+                </div>
+            </div>
+
+
+
+            <!-- end: search & user box -->
+        </header>
+        <!-- end: header -->
+
+        <div class="inner-wrapper">
+            <!-- start: sidebar -->
+
+
+<style>
+    li.borders.col-md-12.no-padding {
+        border-bottom: 1px solid #616060;
+    }
+</style>
+<header class="header header-nav-menu">
+    <div class="logo-container">
+        <a href="/Dashboard/HomeIndex" class="logo">
+            <img src="{% static 'images/Nibin666.jpg' %}" height="40" alt="JVC">
+        </a>
+
+        <!-- end: header nav menu -->
+        <!-- start: search & user box -->
+        <button class="btn header-btn-collapse-nav hidden-md hidden-lg" data-toggle="collapse" data-target=".header-nav">
+            <i class="fa fa-bars"></i>
+        </button>
+
+        <!-- start: header nav menu -->
+        <div class="header-nav collapse">
+            <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1">
+                <nav>
+                    <ul class="nav nav-pills" id="mainNav">
+                      
+                        <li class="dropdown" style="display:block">
+                            <a class="dropdown-toggle">
+                                <i class="fas fa-user-plus" aria-hidden="true"></i>
+                                <span>Users</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li style="display:block">
+                                    <a href="/User/Update"> User</a>
+                                </li>
+                                <li style="display:block">
+                                    <a href="/User/Access"> Access permissions</a>
+                                </li>
+                                <li style="display:block" class="none">
+                                    <a href="/Dashboard/Guideline">
+                                   
+                                        <span>Guideline</span>
+                                    </a>
+                                </li>
+                                <li style="display:none" class="none">
+                                    <a href="/Dashboard/Docs">
+                                        <span>Sample Docs</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown dropdown-mega active" style="display:">
+                            <a class="nav-link dropdown-toggle" href="#"><i class="fas fa-cogs" aria-hidden="true" title="Material Master"></i> Material Master<i class="fas fa-caret-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="dropdown-mega-content">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <ul class="dropdown-mega-sub-nav">
+
+                                                    <div class="col-lg-2 reduce-width">
+                                                        <ul class="dropdown-mega-sub-nav mega-sub-nav-sub-menu-1 in collapse" style="">
+                                                            
+                                                         
+                                                            <li style="display:block" class="nav-active">
+                                                                <a href="/Dashboard" style="font-size: 1.4rem;color: #000;">
+                                                                    Dashboard Offline
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                        <div>
+                                                            <h5 style="font-weight: bold;margin-top: 15px;">Search</h5>
+
+                                                            <ul class="dropdown-mega-sub-nav mega-sub-nav-sub-menu-1 in collapse" style="">
+                                                                <li style="display:block">
+                                                                    <a href="/Search/Searchbydesc">
+                                                                        Fuzzy Search
+                                                                    </a>
+                                                                </li>
+                                                               
+                                                            </ul>
+
+                                                        </div>
+                                                        <div style="">
+                                                            <h5 style="display:block;font-weight: bold;margin-top: 15px;" ng-class="P3">Request </h5>
+
+                                                            <ul class="dropdown-mega-sub-nav mega-sub-nav-sub-menu-1 in collapse" style="">
+                                                                
+                                                                <li style="cursor: not-allowed">
+                                                                    <a href="/MaterialRequest" style="block"> Request Item</a>
+                                                                </li>
+                                                                <li style="cursor: not-allowed">
+                                                                    <a href="/Approver" style="block"> Approve Item</a>
+                                                                </li>
+                                                                <li style="display:block">
+                                                                    <a href="/GeneralSettings/Bigdata">Bulk User Assign</a>
+                                                                </li>
+                                                            </ul>
+
+                                                        </div>
+                                                        <div style="display:block">
+                                                            <h5 style="display:block;font-weight:bold;">Files </h5>
+                                                            <ul class="dropdown-mega-sub-nav mega-sub-nav-sub-menu-1 in collapse" style="">
+                                                                <li style="display:block">
+                                                                    <a href="/File/Import">Import</a>
+                                                                </li>
+                                                                <li style="display:block">
+                                                                    <a href="/File/Assignwork"> Assign Work</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-lg-2 reduce-width  color-gray" style="">
+                                                        <div style="">
+                                                            <h5 class="none" style="font-weight:bold;">Equipment Creation</h5>
+
+
+                                                            <ul class="dropdown-mega-sub-nav mega-sub-nav-sub-menu-1 in collapse" style="">
+
+                                                                <li style="cursor: not-allowed">
+                                                                    <a href="/Equipment/Equipments" style="display:pointer-events:none;color:#ccc;">New Equipment</a>
+                                                                </li>
+                                                                <li style="cursor: not-allowed">
+                                                                    <a href="/Equipment/EquipmentDictionary" style="display:block">Equipment Dictionary</a>
+                                                                </li>
+
+                                                                <li style="cursor: not-allowed">
+                                                                    <a href="/Equipment/SrchEquipment" style="display:block">Search</a>
+                                                                </li>
+                                                            </ul>
+
+
+
+                                                        </div> 
+                                                        <h5 style="font-weight:bold;">Catalogue </h5>
+
+
+                                                        <ul class="dropdown-mega-sub-nav mega-sub-nav-sub-menu-1 in collapse" style="">
+
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Catalogue" style="block"> Catalogue</a>
+                                                            </li>
+
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Catalogue/Review" style="block">Quality Control</a>
+                                                            </li>
+
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Catalogue/Release" style="block">Quality Assurance</a>
+                                                            </li>
+                                                           
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Catalogue/Bulk" style="block">Bulk Upload</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Catalogue/Pvdata" style="pointer-events:none;color:#ccc;">PV Data</a>
+                                                            </li>
+                                                           
+                                                        </ul>
+
+
+
+                                                    </div>
+                                                    <div class="col-lg-2 reduce-width">
+                                                        <ul class="dropdown-mega-sub-nav mega-sub-nav-sub-menu-1 in collapse" style="">
+                                                            <h5 style="display:block;font-weight: bold;">Data Dictionary </h5>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Dictionary/Add" style="block">Create Template</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Dictionary/Values" style="block">Value Master</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Dictionary/Characteristics" style="block">Attribute Master</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Dictionary/Logic" style="block">Attribute Relation</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Dictionary/View" style="block">View Dictionary</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Dictionary/CodeLogic" style="block">Code Logic</a>
+                                                            </li>
+                                                        </ul>
+                                                       
+                                                    </div>
+                                                   
+                                                    <div class="col-lg-2 reduce-width color-gray" style="">
+                                                        <h5 style="display:block;font-weight: bold;">Tools </h5>
+                                                        <ul class="dropdown-mega-sub-nav mega-sub-nav-sub-menu-1 in collapse" style="">
+                                                            
+                                                            <li>
+                                                                <a href="/Master/Plant" style="block">Plant</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Master/General" style="block">General</a>
+                                                            </li>
+
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Master/MRP" style="block">Mrp data</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Master/Sales" style="block">Sales &amp; Others</a>
+                                                            </li>
+                                                            <li style="display:block">
+                                                                <a href="/GeneralSettings/Vendor1" style="block">Vendor Master</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/GeneralSettings" style="block">Settings</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Sequence" style="block">Sequence Master</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Sequence/UOM" style="block">Unit Settings</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/GeneralSettings/UNSPSC" style="block">UNSPSC Master</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/ValueStandardisation" style="block"> Value Standardization</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Settings/EmailSettings" style="block"> Email Settings</a>
+                                                            </li>
+                                                        </ul>
+
+
+                                                    </div>
+                                    
+                                                    <div class="col-lg-2 reduce-width" style="">
+                                                        <h5 style="display:block;font-weight: bold;">Reports </h5>
+                                                        <ul class="dropdown-mega-sub-nav mega-sub-nav-sub-menu-1 in collapse" style="">
+                                                            
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Report/Tracking" style="block"> Tracking Reports</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Report/Export" style="block"> Export</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Report/ERP_logs" style="block"> ERP Change Log</a>
+                                                            </li>
+                                                            <li style="cursor: not-allowed">
+                                                                <a href="/Report/SAPupdate" style="pointer-events:none;color:#ccc;"> SAP Update</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-lg-2 reduce-width" style="">
+                                                        <h5 style="display:block;font-weight: bold;"></h5>
+                                                        <ul class="dropdown-mega-sub-nav mega-sub-nav-sub-menu-1 in collapse" style="">
+                                                            
+                                                            <li style="display:block">
+                                                                <a href="/Common/WOKFLOW.png" style="font-size: 1.4rem;color: #000;font-weight: 700;" target="_blank">Workflow</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>   
+                                                                                                         
+                                                    <br>
+                                
+</ul>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown dropdown-mega service" style="display:block">
+                            <a class="nav-link dropdown-toggle" href="#"><i class="fas fa-toolbox" aria-hidden="true" title="Service Master"></i> Service Master<i class="fas fa-caret-down"></i></a>
+                            <ul class="dropdown-menu" style="max-width: 500px;">
+                                <li>
+                                    <div class="dropdown-mega-content">
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <ul class="dropdown-mega-sub-nav">
+
+                                                    <div class="col-lg-6">
+                                                        <ul class="dropdown-mega-sub-nav mega-sub-nav-sub-menu-1 in collapse" style="">
+                                                            <li style="display:block">
+                                                                <a href="/ServiceSearch/ServiceDashboard">  Dashboard</a>
+                                                            </li>
+                                                            <li style="display:cursor: not-allowed">
+                                                                <a href="/ServiceSearch/ServiceSearch">  Service Search</a>
+                                                            </li>
+                                                            <li style="display:cursor: not-allowed">
+                                                                <a href="/ServiceMaster/RequestService">  Request service</a>
+                                                            </li>
+                                                            <li style="display:cursor: not-allowed">
+                                                                <a href="/ServiceMaster/ApproveService">  Approve Service</a>
+                                                            </li>
+                                                            <li style="display:cursor: not-allowed">
+                                                                <a href="/ServiceMaster/create"> Service Master Tools</a>
+                                                            </li>
+
+                                                            <li style="display:cursor: not-allowed">
+                                                                <a href="/ServiceReport"> Service Report</a>
+                                                            </li>
+                                                        </ul>
+
+
+
+                                                    </div>
+                                                    <div class="col-lg-6" style="background: #f8f8f8;min-height: 140px;">
+                                                        <h5 style="font-weight: bold;">Service Creation </h5>
+                                                        <ul class="dropdown-mega-sub-nav mega-sub-nav-sub-menu-1 in collapse" style="display:block">
+                                                            <li style="display:block">
+                                                                <a href="/ServiceMaster/ServiceCreation"> Service Creation</a>
+                                                            </li>
+                                                            <li style="display:block">
+                                                                <a href="/ServiceReview"> Quality Control</a>
+                                                            </li>
+                                                            <li style="display:block">
+                                                                <a href="/ServiceRelease"> Quality Assurance</a>
+                                                            </li>
+                                                            <li style="display:block">
+                                                                <a href="/ServiceMaster/BulkData"> Service Bulk</a>
+                                                            </li>
+                                                        </ul>
+
+
+                                                    </div>
+
+                                                </ul>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+                        <li class="dropdown" style="display:block">
+                            <a class="dropdown-toggle">
+                                <i class="fas fa-project-diagram" aria-hidden="true" title="Asset Master"></i>
+                                <span>Asset Master</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/Bom/MasterBom"> Bulk Upload</a>
+                                </li>
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/Asset/FunctLoc"> Functional Location</a>
+                                </li>
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/Asset/Equip"> Equipment</a>
+                                </li>
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/Asset/AssetHie"> Asset Hierarchy</a>
+                                </li>
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/Asset/MCP"> MCP</a>
+                                </li>
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/TaskList/TaskList"> TaskList</a>
+                                </li>
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/Asset/MP"> MP</a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li class="dropdown" style="display:block">
+                            <a class="dropdown-toggle">
+                                <i class="fas fa-sitemap" aria-hidden="true" title="Bill Of Material"></i>
+                                <span>Bill Of Material</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li style="display:block">
+                                    <a href="/Bom/BomDashboard"> Dashboard</a>
+                                </li>
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/Bom/MatBom"> Material Bom</a>
+                                </li>
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/Bom/EquipBom"> Equipment Bom</a>
+                                </li>
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/Bom/Bomtracking"> Hierarchy Bom</a>
+                                </li>
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/Bom/BomReport"> Bom Report</a>
+                                </li>
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/Bom/Csir"> CSIR</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown" style="display:none">
+                            <a class="dropdown-toggle">
+                                <i class="fas fa-industry" aria-hidden="true" title="Business Partner"></i>
+                                <span>Business Partner</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/BusinessPartner/creation">Creation</a>
+                                </li>
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/BusinessPartner/General"> General Tools</a>
+                                </li>
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/BusinessPartner/Ven"> Vendor Tools</a>
+                                </li>
+                                <li style="display:cursor: not-allowed">
+                                    <a href="/BusinessPartner/Cust"> Customer Tools</a>
+                                </li>
+                            </ul>
+                        </li>
+                     
+                       
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="header-right">
+         
+            <div id="userbox" class="userbox">
+                <a href="#" data-toggle="dropdown">
+                    <div class="profile-picture" style="color: #000011;font-size: 1.3rem;line-height: 1.2em;text-transform: uppercase;">
+                        
+                        Welcome,
+                    </div>
+                    <div class="profile-info">
+                        <span class="name">Super User</span>
+
+                    </div>
+
+                    <i class="fa custom-caret"></i>
+                </a>
+                <div class="time-login">Last Log in: Sep 05 2023 09:52 AM</div>
+
+                <div class="dropdown-menu">
+                    <ul class="list-unstyled">
+                        <li class="divider"></li>
+                        <li>
+                            <a role="menuitem" href="/User/MyProfile" tabindex="-1"><i class="fa fa-user"></i> My Profile</a>
+                        </li>
+                        <li>
+                            <a role="menuitem" href="/User/Changepassword" tabindex="-1"><i class="fa fa-key"></i> Change Password</a>
+                        </li>
+                        <li>
+                            <a role="menuitem" href="/login/Logout" tabindex="-1"><i class="fa fa-power-off"></i> Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- end: search & user box -->
+</header>
+
+            <!-- end: sidebar -->
+
+            <div>
+                
+
+
+
+<link href="/Content/angular-busy.min.css" rel="stylesheet">
+<link href="/Content/jBox.css" rel="stylesheet">
+
+
+<style>
+    .box {
+        width: 20%;
+        margin: 0 auto;
+        background: rgba(255,255,255,0.2);
+        padding: 35px;
+        border: 2px solid #fff;
+        border-radius: 20px/50px;
+        background-clip: padding-box;
+        text-align: center;
+    }
+
+    .button {
+        font-size: 1em;
+        padding: 10px;
+        color: #fff;
+        border: 2px solid orange;
+        border-radius: 20px/50px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+    }
+
+        .button:hover {
+            background: orange;
+        }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms;
+        visibility: hidden;
+        z-index: 1042;
+        opacity: 0;
+        overflow: scroll;
+    }
+
+        .overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+    .popup {
+        margin: 70px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 90%;
+        position: relative;
+        transition: all 5s ease-in-out;
+    }
+
+        .popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: -5px;
+            right: 3px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #000000;
+        }
+
+            .popup .close:hover {
+                color: orange;
+            }
+
+        .popup .content {
+            max-height: 30%;
+            overflow: auto;
+        }
+
+    .popup-scroll {
+        border: 1px solid #c2d8eb;
+        height: 650px;
+        width: 33%;
+        margin-left: 2px;
+        float: left;
+        overflow-y: scroll;
+        overflow-x: none !important;
+    }
+
+    .pop-bg {
+        background: #f0f0f0;
+    }
+
+    .all-pop .form-group {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+</style>
+<style>
+    .table-striped > tbody > .dash-row:nth-of-type(odd) {
+        background-color: #fffdf8 !important;
+    }
+
+    .table-bordered > tbody > .dash-row > td {
+        border: 1px solid #a29f9f;
+        padding: 3px;
+        font-size: 13px;
+    }
+
+    td.New-complete {
+        background: #e1ffe1;
+        text-align: center;
+    }
+
+    td.Clf-complete {
+        background: #efe1e1;
+        text-align: center;
+    }
+
+    td.update-complete {
+        background: #d2e5ff;
+        text-align: center;
+    }
+
+    td.issue-complete {
+        background: #f3b9b9;
+        text-align: center;
+    }
+
+    .all-data {
+        text-align: center;
+    }
+
+    tr.all-data th {
+        text-align: center;
+    }
+</style>
+
+<section role="main" class="content-body ng-scope" ng-controller="Dashboard1Controller">
+
+    <header class="alert-messages">
+        <div class="col-md-12">
+            <div class="col-md-6"></div>
+            <div class="col-md-2">
+                <div cg-busy="cgBusyPromises" style="margin-top: -45px;z-index: 11111;position:fixed;width:50%"> <div class="cg-busy cg-busy-backdrop cg-busy-backdrop-animation ng-hide ng-scope" ng-show="$cgBusyIsActive()"></div><div class="cg-busy cg-busy-animation ng-hide ng-scope" ng-show="$cgBusyIsActive()"><div class="cg-busy-default-wrapper" style="position: absolute; inset: 0px;">
+
+   <div class="cg-busy-default-sign">
+
+      <div class="cg-busy-default-spinner">
+         <div class="bar1"></div>
+         <div class="bar2"></div>
+         <div class="bar3"></div>
+         <div class="bar4"></div>
+         <div class="bar5"></div>
+         <div class="bar6"></div>
+         <div class="bar7"></div>
+         <div class="bar8"></div>
+         <div class="bar9"></div>
+         <div class="bar10"></div>
+         <div class="bar11"></div>
+         <div class="bar12"></div>
+      </div>
+
+      <div class="cg-busy-default-text ng-binding">Please Wait...</div>
+
+   </div>
+
+</div></div></div>
+            </div>
+        </div>
+    </header>
+    <!-- start: page -->
+    <section class="panel">
+        <header class="panel-heading">
+            <h2 class="panel-title">DASHBOARD1</h2>
+        </header>
+
+        <div class="tab-content">
+
+            <div class="row">
+
+
+                <div class="form-group">
+
+                    <div class="col-md-3">
+
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" id="txtdte" name="Fromdate" ng-model="dte" class="form-control ng-pristine ng-untouched ng-valid hasDatepicker ng-not-empty ng-valid-required" autocomplete="off" placeholder="From Date" required="">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="text" id="txtdte1" name="Todate" ng-model="dte1" class="form-control ng-pristine ng-untouched ng-valid hasDatepicker ng-not-empty ng-valid-required" autocomplete="off" placeholder="To Date" required="">
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-primary" ng-click="bindRequestHistory()">Go</button><div cg-busy="promise" style="position: relative;"><div class="cg-busy cg-busy-backdrop cg-busy-backdrop-animation ng-hide ng-scope" ng-show="$cgBusyIsActive()"></div><div class="cg-busy cg-busy-animation ng-hide ng-scope" ng-show="$cgBusyIsActive()"><div class="cg-busy-default-wrapper" style="position: absolute; inset: 0px;">
+
+   <div class="cg-busy-default-sign">
+
+      <div class="cg-busy-default-spinner">
+         <div class="bar1"></div>
+         <div class="bar2"></div>
+         <div class="bar3"></div>
+         <div class="bar4"></div>
+         <div class="bar5"></div>
+         <div class="bar6"></div>
+         <div class="bar7"></div>
+         <div class="bar8"></div>
+         <div class="bar9"></div>
+         <div class="bar10"></div>
+         <div class="bar11"></div>
+         <div class="bar12"></div>
+      </div>
+
+      <div class="cg-busy-default-text ng-binding">Please Wait...</div>
+
+   </div>
+
+</div></div></div>
+                    </div>
+                    <div class="col-md-2">
+
+                    </div>
+
+
+                </div>
+
+              
+
+
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <div style="width:98.5%">
+                            <table class="table table-bordered mb-none">
+                                <thead>
+
+                                    <tr class="all-data">
+                                        <th style="width: 25%;" colspan="5"></th>
+
+
+
+                                        <th style="width: 10%;" colspan="2">Total Request attended</th>
+
+                                        <th style="width: 20%;" colspan="4"></th>
+
+
+                                    </tr>
+                                    <tr class="all-data">
+                                        <th style="width: 5%; background-color: #a5ec92">Date</th>
+                                        <th style="width: 5%; background-color: #a5ec92">Request Raised</th>
+                                        <th style="width: 5%; background-color: #a5ec92">Released</th>
+                                        <th style="width: 5%; background-color: #a5ec92">Tot Open Req at cat</th>
+
+                                        <th style="width: 5%; background-color: #a5ec92">Catalog Completed</th>
+
+                                        <th style="width: 5%; background-color: #40ca1c">CLF</th>
+                                        <th style="width: 5%; background-color: #40ca1c">Cat Saved</th>
+                                        <th style="width: 5%; background-color: #a5ec92">Pending at Cataloger</th>
+                                        <th style="width: 5%; background-color: #a5ec92">Pending at Approver</th>
+                                        <th style="width: 5%; background-color: #a5ec92">Pending at QC</th>
+                                        <th style="width: 5%; background-color: #a5ec92">Pending at SAP</th>
+
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div style="display:block;max-height:400px;overflow-y:scroll;">
+                            <table class="table table-bordered mb-none">
+
+                                <tbody>
+
+                                    <!-- ngRepeat: mdl in ItemHistoryList -->
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="from-group">
+                    &nbsp;
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+</section>
+<script src="/Scripts/ctrls/Dashboard1.js"></script>
+<script src="/Scripts/angular-busy.min.js"></script>
+<script src="/Scripts/jBox.js"></script>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="/Scripts/theme.js"></script>
+<script src="/Scripts/modernizr.js"></script>
+<script src="/Scripts/nanoscroller.js"></script>
+<script src="/Scripts/fileupload.js"></script>
+
+    <script src="/Scripts/bootstrap.js"></script>
+
+
+    
+   
+
+
+
+
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div></body><fatcoupon-root id="fatcoupon-root" style="all: initial;"></fatcoupon-root></html>
